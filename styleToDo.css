@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    width: 400px;
+    /* height: 1000px; */
+    background: linear-gradient(to bottom right, #00feba, #4b6cb7);
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container header{
+    color: #6A11CB;
+}
+form input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgb(200, 110, 125);
+    color: white;
+    margin: 20px 0;
+    
+}
+form input:focus{
+    caret-color: #6A11CB;
+}
+form input::placeholder{
+    color: #6A11CB;
+}
+form button{
+    padding: 10px 35px;
+    margin-left: 15px;
+    background-color: #5b548a;
+    border: none;
+    border-radius: 10px ;
+    color: #a2ec7f;
+}
+ol li{
+    width: 100%;
+    list-style: none;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    padding: 10px 45px;
+    display: flex;
+    align-items: center;
+}
+ol li::before{
+    content: "";
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-image: url(./radio.png);
+    background-size: cover;
+    position: absolute;
+    top: 5px;
+    left: 0;
+}
+ol li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ol li.checked::before{
+    background-image: url(./check-mark.png);
+    scale: 0.8;
+}
+ol li span{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #b70c0c;
+    scale: 0.9;
+    transition: scale 200ms ease-in-out;
+}
+ol li span:hover{
+    background: #edeef0;
+    scale: 1;
+}
+/* #6A11CB → #4b6cb7
+#2575FC → #182848
+#56ab2f → #9733EE ☑️🔳 */
